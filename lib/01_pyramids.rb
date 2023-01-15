@@ -2,14 +2,24 @@ def how_many_floors
 	puts "Salut, welcome dans ma super pyramide! Combien d'étages veux-tu? (max 25)"
 	print "> "
 	number = gets.to_i
-	if number.even?
+
+	#if number.even?
+		#puts "Uniquement un nombre impair !"
+		#print "> "
+		#number = gets.to_i
+	#else
+		#puts "Voici la pyramide: "
+		#return number
+	#end
+
+	while number.even?
 		puts "Uniquement un nombre impair !"
 		print "> "
 		number = gets.to_i
-	else
-		puts "Voici la pyramide: "
-		return number
 	end
+
+	puts "Voici la pyramide: "
+	return number
 end
 
 def half_pyramid(number)
